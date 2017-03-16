@@ -1,0 +1,453 @@
+/* GENERIC STYLES
+------------------------------------------------  */
+body {
+    position: relative;
+    min-height: 100%;
+    margin: 0;
+    background-color: linear-gradient(to bottom, #E6F2F7 0%, #E6F2F7 60%, #fff 90%);
+    font-family: 'Open Sans';
+    font-size: 1em;
+}
+main {
+    min-height: 78vh;
+    margin-top: 3em;
+}
+footer {
+    position: relative;
+    width: 100%;
+    height: 4em;
+    bottom: 0;
+    left: 0;
+    margin-top: 2em;
+    background-color: rgb(237, 237, 237);
+    text-align: center;
+    padding-top: .75em;
+}
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  margin-bottom: 1em;
+  color: rgb(83, 36, 27);
+}
+a {
+    text-decoration: none;
+}
+p {
+  color: #666;
+}
+img {
+    max-width: 100%;
+}
+ul {
+    list-style: none;
+}
+div {
+  margin: 0;
+  padding: 0;
+}
+
+/* COMPONENTS
+------------------------------------------------  */
+table {
+    border: 1px solid #ccc;
+    width: 90%;
+    margin: 2.5em 0 0 0;
+    padding: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table tr {
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+tr > td:first-of-type {
+  font-weight: 700;
+  background-color: #E6F2F7;
+}
+
+table td {
+    padding: 10px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+@media screen and (min-width: 55.3em) {
+    table {
+      width: 47%;
+    }
+}
+
+/* HEADER & NAVIGATION
+------------------------------------------------  */
+header nav {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(247, 161, 0);
+}
+
+header nav > a {
+    display: block;
+    padding: 0 1.8em;
+    float: left;
+    line-height: 1em;
+}
+
+header nav a:focus {
+    background-color: #DE9000;
+}
+
+header nav:after {
+    display: table;
+    content: "";
+    clear: both;
+}
+
+header nav img {
+    width: 7em;
+    margin: 1em 0;
+}
+
+header nav ul {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0;
+    float: left;
+    background-color: inherit;
+    border-left: .1em solid rgb(222, 144, 0);
+}
+
+nav a {
+    display: block;
+    padding: 1.6em 1.25em;
+    color: rgb(255, 255, 255);
+}
+
+nav a:hover {
+    background-color: #DE9000;
+}
+
+label[for='mobileMenu'], nav input {
+    display: none;
+}
+
+@media screen and (max-width: 48.125em) {
+    header nav > a {
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        float: none;
+    }
+    header nav ul {
+      float: none;
+      text-align: center;
+    }
+    nav ul li {
+        display: block;
+        width: 100%;
+    }
+    label[for="mobileMenu"] + a, nav ul {
+        display: none;
+    }
+    label[for="mobileMenu"] {
+        display: block;
+        background-color: rgb(37, 68, 65);
+        padding: 1.5em 1.25em;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        border: none;
+    }
+    label[for="mobileMenu"]:hover {
+        background-color: rgb(0,0,0);
+    }
+    nav [type="checkbox"]:checked + ul {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 20.625em) {
+    nav ul li {
+        display: block;
+        width: 100%;
+    }
+}
+
+/* LOADER
+---------------------------------------------------- */
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 150vh;
+    width: 100vw;
+    margin-top: -3em;
+    background-color: rgb(247, 161, 0);
+    z-index: 1000;
+    cursor: progress;
+}
+.loading > div {
+    position: relative;
+    top: 30%;
+    margin: 0 auto;
+    border: .6em solid #fff;
+    border-top: .6em solid rgb(0, 170, 230);
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+    animation: spin 1.5s linear infinite;
+}
+.loading h1 {
+  color: white;
+  position: relative;
+  top: 14em;
+  text-align: center;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/* LIST VIEW
+------------------------------------------------  */
+.listSection {
+    /*position: relative;*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.listSection div {
+    position: relative;
+    max-width: 90%;
+    margin-bottom: 1em;
+    background-color: rgb(230, 242, 247);
+}
+
+.listSection section {
+    padding: 0 1em;
+}
+
+.listSection a:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+}
+
+.listSection div:hover p {
+  color: rgb(79, 79, 79);
+}
+
+.listSection div:hover a {
+  color: rgb(247, 161, 0);
+}
+
+.listSection .KoopprijsString {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: .75em;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  font-size: 1.2em;
+}
+
+.houseID {
+  font-weight: 700;
+  font-size: 1.35em;
+  color: #0071B3;
+}
+
+@media screen and (min-width: 37.5em) {
+    .listSection div {
+        max-width: 45%;
+    }
+}
+
+@media screen and (min-width: 51.875em) {
+    .listSection div {
+        max-width: 30%;
+    }
+}
+
+/* FILTERS
+------------------------------------------------  */
+.filterSection {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 3em;
+  border: none;
+}
+
+.filterSection a {
+  padding: .6em 6em;
+  border-radius: .2em;
+  border: .2em solid transparent;
+  background-color: rgb(247, 161, 0);
+  color: white;
+  font-size: 1.2em;
+  font-weight: 800;
+}
+.filterSection > h2, .filterSection > h1 {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 1em;
+}
+.filterSection > h1 {
+  font-size: 1.9em;
+}
+.filterSection a:focus {
+  border-color: #0071B3;
+}
+select {
+    max-width: 35em;
+    height: 3.25em;
+    padding: .5em 4.75em .5em 2.25em;
+    margin-bottom: 1em;
+    border: .2em solid rgb(221, 221, 221);
+    background-color: rgb(255,255,255);
+    background: url("../images/select.svg") no-repeat right 1em center;
+    background-size: .6em;
+    font-family: inherit;
+    font-size: 1.2em;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    outline: none;
+}
+select:hover {
+    border: .1em solid #999;
+}
+.sortOptions {
+  margin-bottom: 3em;
+  margin-left: .5em;
+}
+.sortOptions > a,
+.meerResultaten > a {
+    padding: .75em 1em;
+    border: .2em solid transparent;
+    margin-left: 1em;
+    background-color: #0071B3;
+    font-size: 1.1em;
+    color: white;
+}
+.sortOptions h2 {
+  display: inline-block;
+  margin-left: 7.5em;
+}
+.sortOptions > a:hover,
+.meerResultaten > a:hover {
+  background-color: #025d91;
+}
+select:focus {
+  border-color: #0071B3;
+}
+.sortOptions > a:focus {
+  border-color: rgb(144, 219, 4);
+  background-color: #003554;
+}
+
+.meerResultaten > a {
+  display: block;
+  max-width: 20em;
+  text-align: center;
+  margin: 3em auto 2em auto;
+}
+
+/* DETAIL VIEW
+------------------------------------------------  */
+.detailSection {
+  position: relative;
+}
+
+.meta {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.images {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.images > div:last-of-type,
+.images > div:nth-of-type(2) {
+  width: 22.75%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.images > div:first-of-type {
+  width: 47.5%;
+}
+
+.images > div:first-of-type > img {
+  width: 100%;
+}
+
+.images > div:last-of-type {
+  margin-left: 1em
+}
+
+.images div:last-of-type > img,
+.images div:nth-of-type(2) > img {
+  width: 100%;
+  margin-left: 1em;
+  margin-bottom: 1.2em;
+}
+
+.omschrijving {
+  flex-basis: 100%;
+  padding: 2em;
+}
+
+.omschrijving p {
+  max-width: 40em;
+  font-size: 1.2em;
+}
+
+h1 .Adres {
+  margin-left: 1.7em;
+}
+
+@media screen and (max-width: 50em) {
+  .images > div:last-of-type,
+  .images > div:nth-of-type(2) {
+    display: none;
+  }
+  .images > div:first-of-type {
+    width: 100%;
+    text-align: center;
+  }
+  h1.Adres {
+    margin-left: .5em;
+  }
+  .sortOptions h2 {
+    margin-top: 2em;
+    margin-left: 1em;
+  }
+}
+
+
+/* HELPERS
+------------------------------------------------  */
+
+.hidden {
+    display: none;
+}

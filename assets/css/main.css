@@ -447,6 +447,10 @@ h1 .Adres {
 
 /* HELPERS
 ------------------------------------------------  */
+.js-error {
+  padding: 2.5em;
+  padding-top: 0;
+}
 
 .hidden {
     display: none;

@@ -8,7 +8,10 @@
 ------------------------------------------------ */
 {
   'use strict';
-
+  let location = window.location.href;
+  if(!location.includes('home.html')) {
+    window.location.href = './home.html';
+  } else {
     Routes.init();
-
+  }
 }

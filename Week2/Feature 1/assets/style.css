@@ -1,0 +1,15 @@
+/* Stylesheet for week 2 assignments
+------------------------------------------------- */
+body {
+  background-color: rgb(41, 40, 66);
+  padding: 1em;
+  font-family: sans-serif;
+}
+
+h1 {
+  color: white;
+}
+
+.hidden {
+  display: none;
+}

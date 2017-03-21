@@ -17,9 +17,6 @@
       h1 {
         color: white;
       }
-      .hidden {
-        display: none;
-      }
       img {
         max-width: 100%;
       }
@@ -30,9 +27,9 @@
   <body>
 
     <picture>
-       <source src="http://lorempixel.com/1000/800/" media="(min-width: 65em)">
-       <source src="http://lorempixel.com/400/200/" media="(min-width: 38em)">
-       <source src="http://lorempixel.com/200/100/">
+       <source srcset="http://lorempixel.com/1000/800/" media="(min-width: 65em)">
+       <source srcset="http://lorempixel.com/400/200/" media="(min-width: 38em)">
+       <source srcset="http://lorempixel.com/200/100/">
        <img src="http://lorempixel.com/800/600/" alt="This is shown if the picture element doesn't work">
     </picture>
 

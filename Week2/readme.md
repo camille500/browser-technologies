@@ -21,6 +21,16 @@ The picture element is a new HTML element for showing pictures. The element make
 
 # Feature 4 - ?? [HTML]
 
-# Feature 5 - ?? [CSS]
+# Feature 5 - Calc() [CSS]
+The CSS calc() can help you to make a calculation. The functionality isn't supported in all browsers though. There is a simple solution to tackle this problem. I've used the CSS you see here:
+
+```  h1 {
+    color: white;
+    margin: 12.5%;
+    margin: calc(25% - 5.5em);
+  }
+```
+
+If the browser doesn't support calc(), it will fallback on the width you see declared above the ```margin: calc(..);```
 
 # Feature 6 - ?? [CSS]

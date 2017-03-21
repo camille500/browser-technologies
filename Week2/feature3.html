@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature 3 - Picture Element</title>
+
+    <style>
+      body {
+        background-color: rgb(195, 195, 195);
+        padding: 1.5em;
+        font-family: sans-serif;
+        text-align: center;
+      }
+      h1 {
+        color: white;
+      }
+      .hidden {
+        display: none;
+      }
+      img {
+        max-width: 100%;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <picture>
+       <source src="http://lorempixel.com/1000/800/" media="(min-width: 65em)">
+       <source src="http://lorempixel.com/400/200/" media="(min-width: 38em)">
+       <source src="http://lorempixel.com/200/100/">
+       <img src="http://lorempixel.com/800/600/" alt="This is shown if the picture element doesn't work">
+    </picture>
+
+  </body>
+
+</html>

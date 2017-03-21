@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature 1 - Geolocation</title>
+
+    <style>
+      body {
+        background-color: rgb(41, 40, 66);
+        padding: 1.5em;
+        font-family: sans-serif;
+      }
+      h1 {
+        color: white;
+      }
+      .locationForm {
+        max-width: 10em;
+      }
+      label {
+        font-size: 1.3em;
+        color: white;
+        margin-right: .5em;
+      }
+      input {
+        padding: .75em;
+        margin: 1em 0;
+      }
+      .hidden {
+        display: none;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <section class="locationForm">
+      <form >
+        <label for="locatie">Locatie</label>
+        <input id="locatie" type="text" placeholder="Voer uw locatie in" />
+        <button>Verstuur</button>
+      </form>
+    </section>
+
+    <h1 class="location"></h1>
+    <h1 class="location"></h1>
+
+    <script>
+      var form = document.querySelector('.locationForm');
+      var headers = document.querySelectorAll('.location');
+
+      function supports_geolocation() {
+        return 'geolocation' in navigator;
+      }
+
+      function showPosition(position) {
+        headers[0].innerHTML = `Latitude: ${position.coords.latitude}`;
+        headers[1].innerHTML = `Longitude: ${position.coords.longitude}`;
+      }
+
+      if(supports_geolocation()) {
+        form.classList.add('hidden');
+        navigator.geolocation.getCurrentPosition(showPosition);
+      }
+    </script>
+
+  </body>
+
+</html>

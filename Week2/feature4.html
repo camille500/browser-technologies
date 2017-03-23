@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature 3 - Details & Summary element</title>
+
+    <style>
+        body {
+            background-color: rgb(195, 195, 195);
+            padding: 1.5em;
+            font-family: sans-serif;
+        }
+        details {
+            border-radius: .4em;
+            color: rgb(54, 54, 54);
+            margin: 0 0 .4em;
+            padding: .35em;
+            max-width: 35em;
+        }
+        details[open] {
+            background-color: rgb(129, 124, 233);
+            color: white;
+        }
+        summary {
+            background-color: rgb(205, 60, 59);
+            border-radius: .35em;
+            cursor: pointer;
+            font-size: .8em;
+            font-weight: bold;
+            margin: -1%;
+            padding: .7em 0;
+            position: relative;
+        }
+        section {
+          max-width: 35.5em;
+        }
+        .details {
+          background-color: rgb(205, 60, 59);
+          padding: .1em;
+          padding-left: .5em;
+          color: white;
+          border-radius: .35em;
+          cursor: pointer;
+        }
+        .summary {
+          background-color: blue;
+          display: none;
+          padding: .1em;
+          padding-left: .5em;
+          margin-top: -.2em;
+          border-radius: 0 0 .35em .35em;
+          color: white;
+        }
+        #summary:target {
+          display: block;
+        }
+        a {
+          text-decoration: none;
+        }
+        .hidden {
+          display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <details>
+        <summary>Click here for more information</summary>
+        <p>The details and summary tag is not supported in all browsers yet. There is a good fallback though. For more about the fallback, check the readme.</p>
+    </details>
+
+    <section id="fallback">
+      <a href="#summary">
+        <div class="details">
+        <p><strong>Click here for more information</strong></p>
+      </div>
+      </a>
+      <div id="summary" class="summary">
+        <p>The details and summary tag is not supported in all browsers yet. There is a good fallback though. For more about the fallback, check the readme.</p>
+      </div>
+    </section>
+
+</body>
+
+<script>
+  if (('open' in document.createElement('details'))) {
+    document.getElementById('fallback').classList.add('hidden');
+  }
+</script>
+
+</html>

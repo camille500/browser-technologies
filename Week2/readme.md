@@ -56,4 +56,20 @@ The CSS calc() can help you to make a calculation. The functionality isn't suppo
 
 If the browser doesn't support calc(), it will fallback on the width you see declared above the ```margin: calc(..);```
 
-# Feature 6 - ?? [CSS]
+# Feature 6 - Initial Letter [CSS]
+
+![Initial Letter](screenshots/initial-letter.png)
+
+The Initial Letter in CSS is supported by 11.27% of all the browsers. Actually only the browsers from safari support this new CSS method. The method creates an enlarged cap letter, that you can use using the first-letter selector on, for example an article. Because the method is really cool, i've used it for this demo.
+
+- Users with a safari (web)browser will get to see an enlarged cap that is nicely positioned inside the text.
+- Users without safari will get to see first letter a bit differently. I've styled the first letter before using the initial-letter method. So if that method won't work, the style you see down here will be applied.
+
+```.first-letter {
+  color: rgb(193, 90, 52);
+  font-size: 2em;
+  padding-right: .2em;
+}
+```
+
+https://css-tricks.com/almanac/properties/i/initial-letter/

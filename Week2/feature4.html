@@ -69,10 +69,12 @@
 
 <body>
 
+  <section class="detailSection">
     <details>
         <summary>Click here for more information</summary>
         <p>The details and summary tag is not supported in all browsers yet. There is a good fallback though. For more about the fallback, check the readme.</p>
     </details>
+  </section>
 
     <section id="fallback">
       <a href="#summary">
@@ -90,6 +92,8 @@
 <script>
   if (('open' in document.createElement('details'))) {
     document.getElementById('fallback').classList.add('hidden');
+  } else {
+    document.getElementsByClassName('detailSection')[0].classList.add('hidden');
   }
 </script>
 

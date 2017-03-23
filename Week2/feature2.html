@@ -1,41 +1,71 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
+<head>
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feature 2 - ??</title>
+    <title>Feature 2 - Google Maps</title>
 
     <style>
-      body {
-        margin: 0;
-        background-color: rgb(41, 40, 66);
-        font-family: sans-serif;
-      }
-      h1 {
-        color: white;
-      }
-      main {
-        background-color: rgb(45, 45, 48);
-      }
-      .hidden {
-        display: none;
-      }
+        body {
+            margin: 0;
+            background-color: rgb(41, 40, 66);
+            font-family: sans-serif;
+        }
+
+        h1 {
+            color: white;
+        }
+
+        main {
+            background-color: rgb(45, 45, 48);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #map {
+            position: initial!important;
+        }
+        img {
+          max-width: 100%;
+        }
     </style>
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <main>
-
-    </main>
+    <img id="mapimg" src="./screenshots/map.jpg" />
+    <div id="map" class="hidden"></div>
 
     <script>
-      
+        document.getElementById('mapimg').classList.add('hidden');
+        document.getElementById('map').classList.remove('hidden');
+        function initMap() {
+            // Create a map object and specify the DOM element for display.
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                    lat: 52.356983,
+                    lng: 4.925562
+                },
+                scrollwheel: false,
+                zoom: 18
+            });
+            var marker = new google.maps.Marker({
+                map: map,
+                position: {
+                    lat: 52.356983,
+                    lng: 4.925562
+                },
+                title: 'Your location! =)'
+            });
+        }
     </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAsReaXc2lb3SX__YMh-oBNIIrmyxRwGH8&callback=initMap" async defer></script>
 
-  </body>
+</body>
 
 </html>

@@ -10,8 +10,8 @@ Geolocation is not yet supported by all browsers, I've build a really simple exa
 
 Using this fallback, the user can fill in it's location. If the geolocation functionality does work, its easier for the user. But if the functionality doesn't work, we can ask the user where he is.
 
-[Code](https://github.com/camille500/browser-technologies/blob/master/Week2/feature1.html)
-[Live Version](http://camille-sebastien.com/bt/feature1.html)
+- [Code](https://github.com/camille500/browser-technologies/blob/master/Week2/feature1.html)
+- [Live Version](http://camille-sebastien.com/bt/feature1.html)
 
 http://diveintohtml5.info/detect.html#geolocation
 
@@ -22,8 +22,8 @@ I've used the Google Maps API to show users a specified location on the map. The
 - The user with JavaScript gets to see an interactive map from the Google Maps API
 - Users without JavaScript get to see a picture with the location, so even without JS they know where to go.
 
-[Code](https://github.com/camille500/browser-technologies/blob/master/Week2/feature2.html)
-[Live Version](http://camille-sebastien.com/bt/feature2.html)
+- [Code](https://github.com/camille500/browser-technologies/blob/master/Week2/feature2.html)
+- [Live Version](http://camille-sebastien.com/bt/feature2.html)
 
 # Feature 3 - Picture Element [HTML]
 
@@ -34,8 +34,8 @@ The picture element is a new HTML element for showing pictures. The element make
 - If the picture tag is supported: One of the 3 pictures with in the ```<source>``` elements will show. Based on the screen-size you'll get a specified picture in a high, medium or low resolution.
 - If the picture tag is not supported, the ```<img>``` element will be shown, the ```<source>``` elements will be ignored.
 
-[Code](https://github.com/camille500/browser-technologies/blob/master/Week2/feature3.html)
-[Live Version](http://camille-sebastien.com/bt/feature3.html)
+- [Code](https://github.com/camille500/browser-technologies/blob/master/Week2/feature3.html)
+- [Live Version](http://camille-sebastien.com/bt/feature3.html)
 
 # Feature 4 - Details and Summary element [HTML]
 
@@ -53,8 +53,8 @@ The details and summary element isn't supported by all the browsers yet. The ele
 
 The script above checks if the details element is supported by checking if it is possible to create one. If that is not possible, I've build another detail section using ```div``` elements. If the user clicks on the header, the summary will open. I've made this possible by using the css ```:target``` selector. So there is no JS needed.
 
-[Code](https://github.com/camille500/browser-technologies/blob/master/Week2/feature4.html)
-[Live Version](http://camille-sebastien.com/bt/feature4.html)
+- [Code](https://github.com/camille500/browser-technologies/blob/master/Week2/feature4.html)
+- [Live Version](http://camille-sebastien.com/bt/feature4.html)
 
 http://html5doctor.com/the-details-and-summary-elements/
 
@@ -73,8 +73,8 @@ The CSS calc() can help you to make a calculation. The functionality isn't suppo
 
 If the browser doesn't support calc(), it will fallback on the width you see declared above the ```margin: calc(..);```
 
-[Code](https://github.com/camille500/browser-technologies/blob/master/Week2/feature5.html)
-[Live Version](http://camille-sebastien.com/bt/feature5.html)
+- [Code](https://github.com/camille500/browser-technologies/blob/master/Week2/feature5.html)
+- [Live Version](http://camille-sebastien.com/bt/feature5.html)
 
 # Feature 6 - Initial Letter [CSS]
 
@@ -92,8 +92,8 @@ The Initial Letter in CSS is supported by 11.27% of all the browsers. Actually o
 }
 ```
 
-[Code](https://github.com/camille500/browser-technologies/blob/master/Week2/feature6.html)
-[Live Version](http://camille-sebastien.com/bt/feature6.html)
+- [Code](https://github.com/camille500/browser-technologies/blob/master/Week2/feature6.html)
+- [Live Version](http://camille-sebastien.com/bt/feature6.html)
 
 ***TIP:*** Also check this example in Safari
 

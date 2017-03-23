@@ -1,5 +1,7 @@
 # Feature 1 - Geolocation [JS]
 
+![Geolocation](screenhots/geo.png)
+
 Geolocation is not yet supported by all browsers, I've build a really simple example of a fallback that can be used to prevent problems if someones browser doesn't support the feature.
 
 1. There is a check if the Geolocation feature is available.

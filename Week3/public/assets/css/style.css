@@ -1,0 +1,22 @@
+div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2.5em;
+}
+
+section {
+  position: relative;
+  width: 25em;
+  margin-bottom: 4em;
+}
+
+section span > p {
+  display: block;
+  max-width: 10px;
+  position: absolute;
+  top: 2em;
+  left: 4em;
+  font-size: 1.5em;
+  color: white;
+}

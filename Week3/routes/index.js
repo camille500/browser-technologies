@@ -5,42 +5,61 @@ const router = express.Router();
 const LocalStorage = require('node-localstorage').LocalStorage;
 userStorage = new LocalStorage('./storage/');
 
-router.get('/', function(request, response) {
-  response.render('index');
+router.get('/', function(req, res) {
+  res.render('index');
 });
 
-router.post('/', function(request, response) {
-  const name = request.body.name;
+router.post('/', function(req, res) {
+  const name = req.body.name;
   getUserData(name);
-  response.redirect(`/shirts/${name}`);
+  res.redirect(`/shirts/${name}`);
 });
 
-router.get('/shirts/:name', function(request, response) {
-  const name = request.params.name;
+router.get('/shirts/:name', function(req, res) {
+  const name = req.params.name;
   const data = getUserData(name);
-  response.locals.data = data;
-  response.locals.username = name;
-  response.render('shirts/index');
+  res.locals.data = data;
+  res.locals.username = name;
+  res.render('shirts/index');
 });
 
-router.post('/shirts/:name', function(request, response) {
-  const value = request.body.shirttext;
-  const name = request.params.name;
+router.post('/shirts/:name', function(req, res) {
+  const value = req.body.shirttext;
+  const name = req.params.name;
   const data = getUserData(name);
   data['shirts'].push(value);
   const newData = JSON.stringify(data);
   userStorage.setItem(name, newData);
-  response.redirect(`/shirts/${name}`);
+  res.redirect(`/shirts/${name}`);
 });
 
-router.get('/shirts/delete/:username/:id', function(request, response) {
-  const name = request.params.username;
-  const id = request.params.id;
+router.get('/shirts/delete/:username/:id', function(req, res) {
+  const name = req.params.username;
+  const id = req.params.id;
   const data = getUserData(name);
   data['shirts'].splice(id,id);
   const newData = JSON.stringify(data);
   userStorage.setItem(name, newData);
-  response.redirect(`/shirts/${name}`);
+  res.redirect(`/shirts/${name}`);
+});
+
+router.get('/shirts/edit/:username/:id', function(req, res) {
+  const name = req.params.username;
+  const id = req.params.id;
+  const data = getUserData(name).shirts[id];
+  res.locals.text = data;
+  console.log(data);
+  res.render('shirts/edit');
+});
+
+router.post('/shirts/edit/:username/:id', function(req, res) {
+  const name = req.params.username;
+  const id = req.params.id;
+  const newText = req.body.shirttext;
+  const data = getUserData(name);
+  data.shirts[id] = newText;
+  userStorage.setItem(name, JSON.stringify(data));
+  res.redirect(`/shirts/${name}`);
 });
 
 const getUserData = (username) => {

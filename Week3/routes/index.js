@@ -5,7 +5,17 @@ const router = express.Router();
 const LocalStorage = require('node-localstorage').LocalStorage;
 userStorage = new LocalStorage('./storage/');
 
-router.get('/:name', function(request, response) {
+router.get('/', function(request, response) {
+  response.render('index');
+});
+
+router.post('/', function(request, response) {
+  const name = request.body.name;
+  getUserData(name);
+  response.redirect(`/shirts/${name}`);
+});
+
+router.get('/shirts/:name', function(request, response) {
   const name = request.params.name;
   const data = getUserData(name);
   response.locals.data = data;
@@ -13,24 +23,24 @@ router.get('/:name', function(request, response) {
   response.render('shirts/index');
 });
 
-router.post('/:name', function(request, response) {
+router.post('/shirts/:name', function(request, response) {
   const value = request.body.shirttext;
   const name = request.params.name;
   const data = getUserData(name);
   data['shirts'].push(value);
   const newData = JSON.stringify(data);
   userStorage.setItem(name, newData);
-  response.redirect(`/${name}`);
+  response.redirect(`/shirts/${name}`);
 });
 
-router.get('/delete/:username/:id', function(request, response) {
+router.get('/shirts/delete/:username/:id', function(request, response) {
   const name = request.params.username;
   const id = request.params.id;
   const data = getUserData(name);
   data['shirts'].splice(id,id);
   const newData = JSON.stringify(data);
   userStorage.setItem(name, newData);
-  response.redirect(`/${name}`);
+  response.redirect(`/shirts/${name}`);
 });
 
 const getUserData = (username) => {

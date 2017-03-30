@@ -1,22 +1,48 @@
-div {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 2.5em;
+div.shirt_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2.5em;
 }
 
-section {
-  position: relative;
-  width: 25em;
-  margin-bottom: 4em;
+div.shirt_wrapper > div {
+    position: relative;
+    width: 400px;
+    margin-bottom: 4em;
+    display: inline-block;
 }
 
-section span > p {
-  display: block;
-  max-width: 10px;
-  position: absolute;
-  top: 2em;
-  left: 4em;
-  font-size: 1.5em;
-  color: white;
+div.shirt_wrapper div span > p {
+    display: block;
+    max-width: 10px;
+    position: absolute;
+    top: 3em;
+    left: 5em;
+    color: white;
+    font-size: 22px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+
+svg {
+    width: 100%;
+}
+
+text {
+  font-size: 18px;
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+
+img {
+  max-width: 100%;
+  display: inline-block;
+}
+
+input[type='text'] {
+  padding: .5em;
+  width: 12.5em;
+  font-family: sans-serif;
+  font-size: 1.25em;
+  text-transform: lowercase;
 }

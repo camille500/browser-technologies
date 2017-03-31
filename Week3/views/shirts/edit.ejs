@@ -1,14 +1,17 @@
 <%- include('../partials/head.ejs') %>
 
   <h1>Edit</h1>
+  <p>Je kunt de tekst veranderen door de tekst in het shirt te selecteren en aan te passen</p>
 <section class="edit">
   <form method="post">
     <form method="post">
-  <input class="main_font" value="<%= text %>" type="text" name="shirttext"/>
+  <input class="main_font" value="<%= text %>" type="text" name="shirttext" autofocus/>
   <input type="submit" value="verstuur">
 </form>
-
 <svg class="edit" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 276.27 302.31"><defs><style>.cls-1{fill:#3498db;}.cls-2{fill:#e74c3c;}.cls-3{fill:#2980b9;}.cls-4{fill:#c0392b;}</style></defs><title>Shirt</title><g id="Layer_2" data-name="Layer 2"><g id="Objects"><path class="cls-1" d="M138.13,11.32l38.42-6.21s-4.72,30-38.42,30-38-30-38-30Z"/><path class="cls-2" d="M2.83,103.9,0,112.2s17.15,21.11,51.26,27.14a76.88,76.88,0,0,0,3.39-7C55.45,130.16,2.83,103.9,2.83,103.9Z"/><path class="cls-1" d="M29.37,40.89S8.29,67,2.83,103.9c0,0,24.12,26,51.83,28.46,0,0,3.58-10.74,7.35-14.32C62,118,44.79,34.8,29.37,40.89Z"/><path class="cls-2" d="M273.44,103.9l2.83,8.29S259.12,133.3,225,139.34a76.63,76.63,0,0,1-3.39-7C220.82,130.16,273.44,103.9,273.44,103.9Z"/><path class="cls-1" d="M246.9,40.89S268,67,273.44,103.9c0,0-24.13,26-51.83,28.46,0,0-3.58-10.74-7.35-14.32C214.26,118,231.48,34.8,246.9,40.89Z"/><path class="cls-3" d="M56.13,101.17c-8.23-13.23-28.52-55-26.76-60.28S43.78,27.07,60.54,23,96,5.11,96,5.11c15.46,26.41,42.14,30,42.14,30s26.69-3.64,42.14-30c0,0,18.69,13.73,35.45,17.84S245.14,35.6,246.9,40.89s-18.53,47-26.76,60.28-17.79,126.29-9.85,143.49,11,40.58,11,40.58-28.75,9.7-83.18,9.7S55,285.25,55,285.25,58,261.87,66,244.67,64.36,114.4,56.13,101.17Z"/><path class="cls-4" d="M174.33.52s-19.89,7.82-36.2,7.82S101.62,0,101.62,0L96,4.49a94,94,0,0,0,42.14,9.81c24.62,0,42.14-9.18,42.14-9.18Z"/><path class="cls-2" d="M174.33.52s-8.34,31-36,31S101.62,0,101.62,0L96,4.49s11.79,34.32,42.25,34.32,42-33.69,42-33.69Z"/><path class="cls-2" d="M138.13,294.89c55.11,0,83.18-9.65,83.18-9.65v7.42s-23.65,9.65-83.18,9.65S55,292.67,55,292.67v-7.42S83,294.89,138.13,294.89Z"/></g></g></svg>
+<!--[if IE ]>
+<img src="/assets/img/shirt.png" />
+<![endif]-->
 
 </section>
 

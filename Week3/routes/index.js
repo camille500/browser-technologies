@@ -66,7 +66,7 @@ const getUserData = (username) => {
   if(userStorage.getItem(username)) {
     const data = JSON.parse(userStorage.getItem(username));
     return data;
-  } else {
+  } else if(!userStorage.getItem(username)) {
     userStorage.setItem(username, '{"shirts": []}')
   }
 }

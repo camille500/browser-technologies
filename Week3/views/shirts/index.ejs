@@ -3,6 +3,8 @@
   <h1>Hi <%= username %></h1>
 
   <h2>Voeg een shirt toe</h1>
+  <p>Je kunt in het veld hieronder een tekst invoeren voor op je nieuwe shirt. Druk op de verstuur knop
+     om het resultaat te zien.</p>
 
     <form method="post">
       <form method="post">
@@ -22,8 +24,8 @@
             <img src="/assets/img/shirt.png" />
             <span><p><%= data.shirts[i] %></p></span>
           <![endif]-->
-          <a href="/shirts/delete/<%=username%>/<%=i%>">Delete</a>
-          <a href="/shirts/edit/<%=username%>/<%=i%>">Edit</a>
+          <a class="delete" href="/shirts/delete/<%=username%>/<%=i%>">Delete</a>
+          <a class="edit" href="/shirts/edit/<%=username%>/<%=i%>">Edit</a>
         </div>
       <% } %>
     </div>

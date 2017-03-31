@@ -52,6 +52,13 @@ Not all styling is perfect yet in the IE tests, but thats something I still want
 ![Mobile](images/4.png)
 
 Also on mobile there are still some styling improvements to do, but all functionality works fine.
+I've tested the app on different devices in the Device lab: Apple Ipod, Apple Ipad, Google Nexus and Nokia Windows Phone.
+
+## Not supported Features
+
+- ***Flexbox:*** I've build a inline-block fallback for older browsers.
+- ***localStorage:*** I've made the app working on the server, so there is no need for local storage.
+- ***SVG:*** Not supported in older browsers, PNG fallback if so.
 
 ## Mouse and trackpad
 

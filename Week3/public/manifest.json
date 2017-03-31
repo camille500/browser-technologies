@@ -1,0 +1,19 @@
+{
+  "name": "ShirtCreator - Browser Technologies",
+  "short_name": "ShirtCreator",
+  "description": "Create your own shirt with this creator",
+  "dir": "auto",
+  "lang": "en-US",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": "/",
+  "background_color": "rgb(224, 224, 224)",
+  "theme_color": "rgb(44, 62, 80)",
+  "icons": [
+    {
+      "src": "/assets/img/shirt.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ]
+}

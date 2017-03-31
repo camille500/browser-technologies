@@ -28,6 +28,13 @@ I've build an progressive web application that works without JavaScript, disable
 - The application can be used offline if the pages are cached. To cache the pages, i've used a serviceWorker. It's not possible to create or edit shirts while offline.
 - I'm using server-side local storage to save the users data. The shirts can be viewed from any device or computer and it even works if local storage is disabled or if the user is in incognito mode.
 
+## Features
+
+- Create a shirt with custom text and save it.
+- Access your shirt collection from anywhere, even without internet if cached.
+- Edit or delete your creations.
+- Add the application to your home screen.
+
 ## Browser testing
 
 I've tested the application in multiple browsers. It was my goal to make an app that works up to IE8. These are some screenshots from the tests:
@@ -45,3 +52,15 @@ Not all styling is perfect yet in the IE tests, but thats something I still want
 ![Mobile](images/4.png)
 
 Also on mobile there are still some styling improvements to do, but all functionality works fine.
+
+## Mouse and trackpad
+
+The whole is accessible by tabbing trough the inputs and urls. There is a nice focus state so you can see where you at. See the screenshot below.
+
+![Focus state](images/6.png)
+
+## Broadband
+
+I've tested the website with a 3G Regular connection. The website still loads fast, also because it was cached by a service worker.
+
+![Broadband](images/7.png)

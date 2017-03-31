@@ -33,15 +33,15 @@ I've build an progressive web application that works without JavaScript, disable
 I've tested the application in multiple browsers. It was my goal to make an app that works up to IE8. These are some screenshots from the tests:
 
 ### Google Chrome
-![Chrome](/images/1.png)
+![Chrome](images/1.png)
 
 ### IE8
-![IE8](/images/2.png)
-![IE8](/images/3.png)
+![IE8](images/2.png)
+![IE8](images/3.png)
 
 Not all styling is perfect yet in the IE tests, but thats something I still want to work on. All functionality works perfectly though.
 
 ### Mobile
-![Mobile](/images/4.png)
+![Mobile](images/4.png)
 
 Also on mobile there are still some styling improvements to do, but all functionality works fine.

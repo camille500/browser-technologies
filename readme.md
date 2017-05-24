@@ -4,7 +4,7 @@ This is the documentation for the t-shirt web application I've build for the Bro
 
 ## Live version
 
-- https://bt-new.herokuapp.com/ 
+- https://bt-new.herokuapp.com/
 
 ## Installation
 
@@ -20,7 +20,7 @@ After following these steps, the application is online!
 
 ## The user story
 
-As user I want to create shirts with a custom text. If I'm not at home, I still want to be able to show the shirts I've created to my friends. At home I use an old computer with IE8, and I always disable JavaScript. When traveling I want to view or edit the shirts on my phone, but due to slow internet, I disabled images too. The application has to work in all of these situations, and even offline.
+As user I want to create shirts with a custom text. If I'm not at home, I still want to be able to show the shirts I've created to my friends. At home I use an old computer with IE7, and I always disable JavaScript. When traveling I want to view or edit the shirts on my phone, but due to slow internet, I disabled images too. The application has to work in all of these situations, and even offline.
 
 ## What I've build
 
@@ -46,7 +46,7 @@ I've tested the application in multiple browsers. It was my goal to make an app 
 ### Google Chrome
 ![Chrome](images/1.png)
 
-### IE8
+### IE7
 ![IE8](images/2.png)
 ![IE8](images/3.png)
 

@@ -15,6 +15,9 @@ app.use(compression());
 --------------------------------------------------------- */
 const indexRouter = require('./routes/index');
 
+require('dotenv').config()
+var port = process.env.PORT || 3000;
+
 /* MIDDLEWARE FOR THE VIEW ENGINE
 --------------------------------------------------------- */
 app.set('views', path.join(__dirname, 'views'));

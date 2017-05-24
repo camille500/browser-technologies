@@ -16,7 +16,7 @@ app.use(compression());
 const indexRouter = require('./routes/index');
 
 require('dotenv').config()
-var port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 /* MIDDLEWARE FOR THE VIEW ENGINE
 --------------------------------------------------------- */
@@ -35,6 +35,6 @@ app.use('/', indexRouter);
 
 /* START THE SERVER
 --------------------------------------------------------- */
-app.listen(3000, function() {
+app.listen(port, function() {
     console.log('Server started on port 3000');
 });

@@ -4,7 +4,7 @@
   "description": "Assignments for Browser Technologies week 3",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
     "online": "ngrok http 3000"
   },
   "author": "Camille Sébastien Niessen",

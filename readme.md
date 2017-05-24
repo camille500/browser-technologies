@@ -2,6 +2,10 @@
 
 This is the documentation for the t-shirt web application I've build for the Browser Technologies course during the minor Web Development on the HvA.
 
+## Live version
+
+- https://bt-new.herokuapp.com/ 
+
 ## Installation
 
 Please follow these steps to install the application

@@ -1,104 +1,73 @@
-# Progressive enhancement on Funda Application
+# Browser technologies - week 3
 
-I've done a progressive enhancement audit on the Funda Application I've build in the last project. This are the results
+This is the documentation for the t-shirt web application I've build for the Browser Technologies course during the minor Web Development on the HvA.
 
-![Screen from the funda application](screenshots/1.png "Screen from the funda application")
+## Installation
 
-## Table of contents
-- [Javascript](#javascript)
-- [Images](#images)
-- [Fonts](#fonts)
-- [Colors](#colors)
-- [Cookies](#cookies)
-- [LocalStorage](#Localstorage)
-- [Broadband](#broadband)
-- [Trackpad/Mouse](#no-mouse)
+Please follow these steps to install the application
 
+1. Clone the repository ```$ git clone https://github.com/camille500/browser-technologies.git```
+2. Navigate to the folder ```$ cd your_directory/Week3```
+3. Install all dependencies with ```npm install```
+4. Start the application with ```npm start```
+5. To get the application online, use ```npm run online```
 
-### <a name="javascript"></a>The app without JavaScript
+After following these steps, the application is online!
 
-The application gets all its data from an API by a XMLHttpRequest. Also most of the routing goes via JavaScript. Before disabeling JavaScript I didn't expect the application to work. I've build a fallback for that allready. In the image below you see the message that the user sees when JS is disabled.
+## The user story
 
-![Error message when JS is disabled](screenshots/2.png "Error message when JS is disabled")
+As user I want to create shirts with a custom text. If I'm not at home, I still want to be able to show the shirts I've created to my friends. At home I use an old computer with IE8, and I always disable JavaScript. When traveling I want to view or edit the shirts on my phone, but due to slow internet, I disabled images too. The application has to work in all of these situations, and even offline.
 
-##### More solutions
+## What I've build
 
-- All the menu functionality can be done via the CSS :target selector.
-- JavaScript should be used as an extra functionality, but in this case that is allmost impossible because the API is the main functionality of the application
+I've build an progressive web application that works without JavaScript, disabled images and even offline if the page is cached. These are the steps i've taken:
 
-### <a name="images"></a>The app without images
+- Build an server-side application, so that JavaScript is not required for the user.
+- The application works back to IE8 due to some fallbacks I've written.
+- The application works without images (except older IE versions who don't support SVG) because I've used inline SVG's.
+- The application can be used offline if the pages are cached. To cache the pages, i've used a serviceWorker. It's not possible to create or edit shirts while offline.
+- I'm using server-side local storage to save the users data. The shirts can be viewed from any device or computer and it even works if local storage is disabled or if the user is in incognito mode.
 
-After searching, the user gets a list of possible matches. Each item has a photo and a short description. If you disable images, the layout breaks as seen in the image below.
+## Features
 
-![The application without images](screenshots/3.png "The application without images")
+- Create a shirt with custom text and save it.
+- Access your shirt collection from anywhere, even without internet if cached.
+- Edit or delete your creations.
+- Add the application to your home screen.
 
-The biggest problem is that the image holder has no fixed width and height. The whole is now not so clear to read anymore. Also the logo seems not to be working
+## Browser testing
 
-##### To Do
+I've tested the application in multiple browsers. It was my goal to make an app that works up to IE8. These are some screenshots from the tests:
 
-- Add a inline SVG logo so that if images are disabled, the logo is still shown.
-- Add fixed width and height to the image holders.
-- Styling the image holder using the Alt attribute
+### Google Chrome
+![Chrome](images/1.png)
 
-### <a name="fonts"></a>The app without used fonts
+### IE8
+![IE8](images/2.png)
+![IE8](images/3.png)
 
-![The application without used fonts](screenshots/4.png "The application without used fonts")
+Not all styling is perfect yet in the IE tests, but thats something I still want to work on. All functionality works perfectly though.
 
-As you can see in the example above, the application still works fine without the 'Open Sans' font I'm using. The only problem is that I have no sans-serif fallback. The total style of the application doesn't look to good because of that. The app uses no icon fonts, so thats not a problem.
+### Mobile
+![Mobile](images/4.png)
 
-##### To Do
+Also on mobile there are still some styling improvements to do, but all functionality works fine.
+I've tested the app on different devices in the Device lab: Apple Ipod, Apple Ipad, Google Nexus and Nokia Windows Phone.
 
-- Add a sans-serif fallback instead of the standard fallback.
+## Not supported Features
 
-### <a name="colors"></a>Colors
-Since I'm colorblind myself, its easy to say if the application works out for me. The colors are very clear and different from each other. I've also tested the website in black and white, the example is here below.
+- ***Flexbox:*** I've build a inline-block fallback for older browsers.
+- ***localStorage:*** I've made the app working on the server, so there is no need for local storage.
+- ***SVG:*** Not supported in older browsers, PNG fallback if so.
 
-![The application without color](screenshots/5.png "The application without color")
+## Mouse and trackpad
 
-As you can see, there is a good contrast between the colors. That makes it possible to view the application in black and white. So even for the hardcore colorblind people, the app is accessible.
+The whole is accessible by tabbing trough the inputs and urls. There is a nice focus state so you can see where you at. See the screenshot below.
 
-### <a name="cookies"></a>Cookies turned off
-I dont use cookies, so it wasn't a problem when turned of
+![Focus state](images/6.png)
 
-### <a name="Localstorage"></a>Localstorage
-The application uses Localstorage to store its data. I've build in a fallback in case the Localstorage doesn't work. In that case the application does a new API call for every search query. There is one problem though, the filters wont work because they depend on data from Localstorage.
+## Broadband
 
-##### To Do
-- Make sure sorting still works without Localstorage, by storing it in the cache.
+I've tested the website with a 3G Regular connection. The website still loads fast, also because it was cached by a service worker.
 
-### <a name="broadband"></a>Broadband
-I've tested the application in 2 different connections.
-The first one was a regular 2G connection of 300ms / second.
-
-![Regular 2G](screenshots/6.png "Regular 2G")
-
-The second one was a regular 3G connection of 100ms / second.
-
-![Regular 3G](screenshots/7.png "Regular 3G")
-
-The images are not loading that fast. Thats because the images sizes are really big. A solution would be to use smaller images from the Funda API. Also the JavaScript is seperated over different modules, that are all loaded into the app. The app has to do a lot of requests. It's better to concat, minify and uglify it to one file. That can be done using Gulp
-
-![Regular 3G](screenshots/8.png "Regular 3G")
-
-##### To Do
-
-- Use Gulp to concat, minify and uglify the fonts
-- Use a fontfaceobserver to make sure there is no FOIT.
-- Use smaller images from the Funda API.
-
-### <a name="no-mouse"></a>Navigation without mouse
-
-I've added focus states to all links and input elements in the application, so its easy to TAB trough the website. There are some small improvements, but not to much.
-
-![Navigation without mouse](screenshots/9.png "Navigation without mouse")
-![Navigation without mouse](screenshots/10.png "Navigation without mouse")
-![Navigation without mouse](screenshots/11.png "Navigation without mouse")
-
-##### To Do
-
-- Some small visual improvements
-
-## Tools I've used
-
-- The Chrome devtools
-- [Web Developer plugin for Chrome](https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm)
+![Broadband](images/7.png)

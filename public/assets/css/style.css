@@ -15,6 +15,10 @@ h2 {
   color: #34495e;
 }
 
+main.centered {
+  text-align: center;
+}
+
 a, input {
   outline: none;
   border: .25em solid transparent;
@@ -54,6 +58,7 @@ div.shirt_wrapper div span > p {
 }
 
 input[type='text'] {
+    transition: 1s;
     padding: .5em;
     width: 12.5em;
     font-family: sans-serif;
@@ -79,15 +84,26 @@ section.edit input[type="submit"] {
   left: 14.5em;
 }
 
+input[type="submit"]:hover {
+  transition: 1s;
+  transform: scale(1.1);
+}
+
+input[type="submit"]:focus {
+  border-color: rgb(213, 186, 4);
+}
+
 input[type="submit"] {
-  padding: .85em 1.75em;
+  transition: 1s;
+  padding: .75em 1.75em;
   background-color: #1abc9c;
   color: white;
-  border: 0 none;
+  border: .25em solid transparent;
   font-size: 1em;
   cursor: pointer;
   -webkit-border-radius: .25em;
   border-radius: .25em;
+  margin-left: .5em;
 }
 
 svg {
@@ -98,6 +114,11 @@ svg.edit {
     max-width: 17em;
     font-size: 2em;
     color: white;
+}
+
+form {
+  padding: 1em;
+  margin-top: 3.5em;
 }
 
 text {

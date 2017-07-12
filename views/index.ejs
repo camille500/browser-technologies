@@ -1,11 +1,12 @@
 <%- include('./partials/head.ejs') %>
+<main class="centered">
+  <h1>Voer je naam in</h1>
 
-<h1>Voer je naam in</h1>
-
-<form method="post">
   <form method="post">
-    <input type="text" placeholder="Tekst voor op shirt" name="name" maxlength="8" required>
-    <input type="submit" value="verstuur">
-</form>
+    <form method="post">
+      <input type="text" placeholder="Tekst voor op shirt" name="name" maxlength="8" required>
+      <input type="submit" value="verstuur">
+  </form>
+</main>
 
 <%- include('./partials/foot.ejs') %>

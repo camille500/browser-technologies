@@ -58,6 +58,23 @@ Not all styling is perfect yet in the IE tests, but thats something I still want
 Also on mobile there are still some styling improvements to do, but all functionality works fine.
 I've tested the app on different devices in the Device lab: Apple Ipod, Apple Ipad, Google Nexus and Nokia Windows Phone.
 
+## Device lab
+I've tested my application at the device lab. On almost all devices the app worked fine. On some older devices SVG wasn't supported, so I decided to implement a feature detection to replace the SVG for PNG's if needed.
+
+**First photo**
+
+![Device lab 1](images/dvl1.jpeg)
+
+**Second photo**
+
+![Device lab 2](images/dvl2.jpeg)
+
+## Screen reader
+
+I've tested the application with a screen reader as well. The result was awesome, the application can be used by the blind and visually impaired as well. Here a screenshot when I was using the ChromeVox screen reader
+
+![Screen reader](images/sr.png)
+
 ## Not supported Features
 
 - ***Flexbox:*** I've build a inline-block fallback for older browsers.
